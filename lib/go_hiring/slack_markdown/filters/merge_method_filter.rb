@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module GoHiring
   module SlackMarkdown
     # Public: Filter Module has all filters that markdown will be converted
@@ -64,7 +65,7 @@ module GoHiring
 
         # Private: Replace the fixed block in full text
         def replace!(replacable, converted)
-          documentation.gsub!(replacable, converted)
+          self.documentation = documentation.gsub(replacable, converted)
         end
       end
     end

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module GoHiring
   # Public: Module responsible for markdown conversion
   module SlackMarkdown

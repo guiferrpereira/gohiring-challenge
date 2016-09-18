@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Kernel
   # Internal: Mock call to Kernel system
   def `(cmd)

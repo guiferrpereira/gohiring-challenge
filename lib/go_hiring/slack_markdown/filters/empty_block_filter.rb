@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module GoHiring
   module SlackMarkdown
     # Public: Filter Module has all filters that markdown will be converted

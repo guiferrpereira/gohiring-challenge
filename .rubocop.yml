@@ -47,7 +47,7 @@ Style/Not:
   Enabled: false
 
 Documentation:
-  Enabled: false # TODO: Enable again once we have more docs
+  Enabled: true
 
 Style/CaseIndentation:
   IndentWhenRelativeTo: case
@@ -74,7 +74,7 @@ Style/TrivialAccessors:
   ExactNameMatch: true
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
 
 Lint/EndAlignment:
   AlignWith: variable

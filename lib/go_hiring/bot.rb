@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module GoHiring
   # Public: Ruby Doc Bot initializer. Responsible for call methods to start bot.
   class RubyDocBot

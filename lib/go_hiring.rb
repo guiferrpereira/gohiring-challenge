@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Public: Method used start Ruby Doc Bot.
 # All methods are module methods and should be called on the GoHiring module.
 #

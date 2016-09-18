@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require_relative "../spec_helper"
 
 describe "Bot should respond to messages" do
