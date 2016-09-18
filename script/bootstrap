@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# script/bootstrap: Resolve all dependencies that the application requires to
+#                   run.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if [ "$(uname -s)" = "Darwin" ]; then
+  source ~/.bash_profile
+fi
+
+if ! command -v rbenv > /dev/null; then
+  echo "rbenv not installed ..."
+  if [ "$(uname -s)" = "Darwin" ]; then
+    git clone "git://github.com/sstephenson/rbenv.git" ~/.rbenv
+    echo 'export RBENV_ROOT="$HOME/.rbenv"' >> ~/.bash_profile
+    echo 'export PATH="$RBENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+
+    git clone "git://github.com/sstephenson/ruby-build.git" ~/.rbenv/plugins/ruby-build
+    echo 'export PATH="$RBENV_ROOT/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
+    echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+    source ~/.bash_profile
+  fi
+fi
+
+if [ -f ".ruby-version" ] && [ -z "$(rbenv version-name 2>/dev/null)" ]; then
+  echo "==> Installing Ruby… with docs..."
+  RUBY_CONFIGURE_OPTS=--enable-install-doc rbenv install --skip-existing
+
+  eval "$(rbenv init -)"
+  which bundle >/dev/null 2>&1  || {
+    gem install bundler
+    rbenv rehash
+  }
+fi
+
+if [ -f "Gemfile" ]; then
+  echo "==> Installing gem dependencies…"
+  bundle check --path vendor/gems >/dev/null 2>&1  || {
+    bundle install --path vendor/gems --quiet --without production
+  }
+fi

@@ -1,0 +1,12 @@
+{
+  "webserver": {
+    "port": "8081",
+    "workers": "1"
+  },
+  "messages": {
+    "token_not_found": "No SLACK_API_TOKEN provided! Please provide Slack API Token, set your env: SLACK_API_TOKEN.",
+    "hello" : "Successfully connected, welcome '%{name}' to the '%{team}' team at https://%{domain}.slack.com.",
+    "documentation_not_found" : "Sorry, but i couldn't find any documentation with command: %s",
+    "command_help" : "You should send one command (e.g.: Array#first)"
+  }
+}
