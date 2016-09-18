@@ -8,12 +8,15 @@
 module GoHiring
   # Public: Responsible to start program by calling RubyDocBot class
   #
+  # options - A Hash containing optional values for internal services
+  #           :client - The Slack RealTime API Client that will be
+  #                     communicating with Slack's API (optional).
   #
   # Examples
   #
   #   docbot = GoHiring.run
   #
-  # Returns initialized application
+  # Returns Application initialized and waiting for messages
   def self.run(options = {})
     RubyDocBot.new(options).run!
   end

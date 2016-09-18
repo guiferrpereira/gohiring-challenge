@@ -32,6 +32,10 @@ module GoHiring
       # Public: Initialize a Print Hello.
       #
       # client - Slack::RealTime::Client object.
+      #
+      # Examples
+      #
+      #    GoHiring::Bot::PrintHello.new(client)
       def initialize(client)
         @client = client
       end
