@@ -24,7 +24,7 @@ To start the bot you must provide a Slack API token. This can be done through th
 
 Starting the documentation bot with:
 
-`SLACK_API_TOKEN=XXX script/server`
+`SLACK_API_TOKEN=xoxb-79712385281-123456789 script/server`
 
 The bot will join your Slack team and wait for commands!
 
