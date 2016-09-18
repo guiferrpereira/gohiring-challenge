@@ -1,6 +1,16 @@
 module GoHiring
   module SlackMarkdown
+    # Public: Filter Module has all filters that markdown will be converted
     module Filters
+      # Public: HeaderFilter will convert markdownheaders into prettier format
+      #
+      # documentation - Documentation received from Ri Command
+      #
+      # Examples
+      #
+      #    GoHiring::SlackMarkdown::Filters::HeaderFilter.new("# Header")
+      #
+      # Returns documentation with methods merged
       class HeaderFilter < Struct.new(:documentation)
         # Public: Replaces markdown header # Header for * Header *
         #         block inside markdown
@@ -9,7 +19,7 @@ module GoHiring
         #
         # Examples
         #
-        #    GoHiring::SlackMarkdown::Filters::EmptyBlockFilter.new("# Header").run
+        #    GoHiring::SlackMarkdown::Filters::HeaderFilter.new("# Header").run
         #    # => "* Header *"
         #
         # Returns formatted Header for Slack Markdown

@@ -1,5 +1,13 @@
 module GoHiring
+  # Public: Module responsible to initialize bot
   module Bot
+    # Public: Print hello when successfully signs in slack
+    #
+    # client  - Slack::RealTime::Client Object initialized
+    #
+    # Examples
+    #
+    #    GoHiring::Bot::PrintHello.new(client)
     class PrintHello
       # Public: Print Hello message when successfully signs in slack
       # This message will exit on STDOUT

@@ -1,5 +1,17 @@
 module GoHiring
+  # Public: Module responsible for markdown conversion
   module SlackMarkdown
+    # Public: Processor will call all filters available
+    #        to transform markdown in slack pretty markdown
+    #
+    #
+    # documentation - Documentation received from Ri Command
+    #
+    # Examples
+    #
+    #    GoHiring::SlackMarkdown::Processor.new(documentation).run!
+    #
+    # Returns documentation with pretty format
     class Processor < Struct.new(:documentation)
       # Public: Process markdown documentation into slack markdown
       #

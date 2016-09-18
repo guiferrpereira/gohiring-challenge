@@ -1,6 +1,16 @@
 module GoHiring
   module SlackMarkdown
+    # Public: Filter Module has all filters that markdown will be converted
     module Filters
+      # Public: EmptyBlockFilter will remove empty blocks from documentation
+      #
+      # documentation - Documentation received from Ri Command
+      #
+      # Examples
+      #
+      #    GoHiring::SlackMarkdown::Filters::EmptyBlockFilter.new("---\n\n\n\n---")
+      #
+      # Returns documentation cleaner, without empty blocks
       class EmptyBlockFilter < Struct.new(:documentation)
         # Public: Removes empty block inside markdown
         #

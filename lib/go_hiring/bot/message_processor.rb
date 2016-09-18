@@ -1,5 +1,7 @@
 module GoHiring
+  # Public: Module responsible to initialize bot
   module Bot
+    # Public: MessageProcessor will process and analyze received messages
     class MessageProcessor
       # Public: Analyzes incoming messages only if incoming messages aren't from bot himself
       #
@@ -25,6 +27,12 @@ module GoHiring
       #
       # client - Slack::RealTime::Client object.
       # data - Data catched from slack (includes text message, user, channel, etc)
+      #
+      # Examples
+      #
+      #    GoHiring::Bot::MessageProcessor.new(client, data)
+      #
+      # Returns new message for user
       def initialize(client, data)
         @client  = client
         @message = data["text"]

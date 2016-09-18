@@ -1,4 +1,5 @@
 coverage
+doc
 vendor/gems
 .bundle
 .yardoc

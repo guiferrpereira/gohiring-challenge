@@ -1,6 +1,16 @@
 module GoHiring
   module SlackMarkdown
+    # Public: Filter Module has all filters that markdown will be converted
     module Filters
+      # Public: BlockBreakerFilter will replace block breaker for bigger format
+      #
+      # documentation - Documentation received from Ri Command
+      #
+      # Examples
+      #
+      #    GoHiring::SlackMarkdown::Filters::BlockBreakerFilter.new("---")
+      #
+      # Returns documentation with large block breakers
       class BlockBreakerFilter < Struct.new(:documentation)
         # Public: Replaces block breaker "---"
         #  for "------------------------------------------------------------------------------"

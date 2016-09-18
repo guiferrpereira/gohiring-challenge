@@ -1,6 +1,16 @@
 module GoHiring
   module SlackMarkdown
+    # Public: Filter Module has all filters that markdown will be converted
     module Filters
+      # Public: MergeMethodFilter will merge all methods into prettier format
+      #
+      # documentation - Documentation received from Ri Command
+      #
+      # Examples
+      #
+      #    GoHiring::SlackMarkdown::Filters::MergeMethodFilter.new("Class methods\n\n test\n any?\n first")
+      #
+      # Returns documentation with methods merged
       class MergeMethodFilter < Struct.new(:documentation)
         # Public: Merge method list inside markdown
         #
@@ -8,7 +18,7 @@ module GoHiring
         #
         # Examples
         #
-        #    GoHiring::SlackMarkdown::Filters::EmptyBlockFilter.new("--- Class methods\n\n test\n any?\n first").run
+        #    GoHiring::SlackMarkdown::Filters::MergeMethodFilter.new("--- Class methods\n\n test\n any?\n first").run
         #    # => "--- Class methods\n test, any?, first"
         #
         # Returns clean text with merged methods for Slack Markdown

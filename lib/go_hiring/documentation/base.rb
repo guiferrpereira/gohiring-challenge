@@ -1,5 +1,15 @@
 module GoHiring
+  # Public: Module responsible to get and format documentation
   module Documentation
+    # Public: Base will get ri documentation
+    #
+    # command - Ruby command to send Ri
+    #
+    # Examples
+    #
+    #    GoHiring::Documentation::Base.new("Array#first")
+    #
+    # Returns documentation from ri command
     class Base < Struct.new(:command)
       # Public: Get Documentation / Message that should be returned to slack user
       #

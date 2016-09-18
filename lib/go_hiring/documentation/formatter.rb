@@ -1,5 +1,15 @@
 module GoHiring
+  # Public: Module responsible to get and format documentation
   module Documentation
+    # Public: Formatter will format documentation processing filters
+    #
+    # documentation - Ruby command to send Ri
+    #
+    # Examples
+    #
+    #    GoHiring::Documentation::Formatter.new("# Array#first ....")
+    #
+    # Returns formatted documentation
     class Formatter < Struct.new(:documentation)
       # Public: Gets formatted documentation in slack markdown as decribed here:
       # # https://api.slack.com/docs/message-formatting

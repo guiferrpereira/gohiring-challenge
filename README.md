@@ -46,7 +46,7 @@ If you direct message bot:
 
 `please explain Array`
 
-Bot understands `help` command, and remind you how use it.
+Bot understands `help` command, reminds you how to use bot.
 
 ## Tests
 

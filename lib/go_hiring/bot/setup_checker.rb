@@ -1,5 +1,13 @@
 module GoHiring
+  # Public: Module responsible to initialize bot
   module Bot
+    # Public: Check if slack api token is provided
+    #
+    # Examples
+    #
+    #    GoHiring::Bot::SetupChecker.run
+    #
+    # raises Error if token not provided
     class SetupChecker
       # Returns Error if Slack token is not set
       # Returns nothing.

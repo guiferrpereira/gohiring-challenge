@@ -1,5 +1,16 @@
 module GoHiring
+  # Public: Module responsible to get and format documentation
   module Documentation
+    # Public:  Finder will find documentation calling
+    #         Ri command on system
+    #
+    # command - Ruby command to send Ri
+    #
+    # Examples
+    #
+    #    GoHiring::Documentation::Finder.new("Array#first")
+    #
+    # Returns documentation from ri command
     class Finder < Struct.new(:command)
       # Public: Get Ri documentation
       #
