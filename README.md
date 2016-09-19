@@ -58,6 +58,11 @@ The project contains integration and unit tests written in RSpec, they can be ru
 
 This project's code coverage is checked using [SimpleCov](https://github.com/colszowka/simplecov).
 
+## Docker
+
+I created Dockerfile, in order to run it. Setup your system with [docker](https://docs.docker.com/engine/installation/) then:
+
+`docker run -e "SLACK_API_TOKEN=xoxb-1234567-987654321" -t --name gohiring -i docker.io/guipereira/gohiring-challenge:latest /bin/bash`
 
 ## Development
 

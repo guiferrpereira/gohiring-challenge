@@ -1,4 +1,5 @@
-require 'json'
+# frozen_string_literal: true
+require "json"
 
 root = File.expand_path("../..", __FILE__)
 
